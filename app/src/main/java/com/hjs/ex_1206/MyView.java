@@ -25,7 +25,7 @@ public class MyView extends View {
         paint.setColor(Color.argb(255,0,84,255));
 
         //붓의 두께
-        paint.setStrokeWidth(5);
+        paint.setStrokeWidth(20);
 
         //캔버스에 그림을 그린다.
         //사각형
@@ -45,7 +45,17 @@ public class MyView extends View {
         canvas.drawPath(path, paint);
 
         paint.setColor(Color.argb(255,61,138,204));
+        paint.setStyle(Paint.Style.STROKE);
+
+
         canvas.drawRect(700,700, 900,900,paint);
+
+        Path path2 = new Path();
+        path2.moveTo(500,400);
+        path2.lineTo(300,700);
+        path2.lineTo(700,1000);
+
+        canvas.drawPath(path2,paint);
 
     }
 }
